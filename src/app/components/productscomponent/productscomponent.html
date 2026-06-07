@@ -1,0 +1,16 @@
+<div class="flex flex-wrap justify-evenly">
+    @for ( product of products; track $index){
+    <div class="mx-4 w-[25%] p-3 mt-4 mb-4 flex-col rounded-lg shadow-md">
+        <div class="overflow-hidden rounded-md">
+        <img [src]="'../../../../assets/images/'+product.product_image" alt="shirt image"
+        class="rounded-md mx-auto  transition-transform duration-300 ease-in-out transform hover:scale-105"
+        >
+        </div>
+    
+    <div  class="p-4 text-center">
+        <h5 class="font-semibold"><a href="#" class>{{product.product_name}}</a></h5>
+        <p class="text-base font-normal mt-1">${{product.price}}</p>
+    </div>
+    </div>
+    }
+</div>
